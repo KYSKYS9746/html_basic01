@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_가로배치_기본섹션flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        img {
+            /* 이미지 사이에 4px 정도 공간이 생기는데 vertical-align:middle = 공간을 없앰 */
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+
+        .Inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .Title {
+            max-width: 1200px;
+            margin: 0 auto 32px auto;
+            padding: 0 15px;
+        }
+
+        .Title h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 0 24px 0;
+        }
+
+
+        #Basic01 {
+            padding: 120px 0;
+            background: #f9f9f9;
+        }
+
+        #Basic01 .Inner {
+            display: flex;
+            gap: 30px;
+        }
+
+        #Basic01 .itm {
+            flex: 1;
+            background: tomato;
+        }
+
+        #Basic02 {
+            padding: 120px 0;
+        }
+
+        #Basic02 .Inner {
+            display: flex;
+            gap: 30px;
+        }
+
+        #Basic02 .itm {
+            flex: 1;
+        }
+
+        #Basic03 {
+            padding: 120px 0;
+            background: #f9f9f9;
+        }
+
+        #Basic03 .Inner {
+            display: flex;
+        }
+
+        #Basic03 .itm {
+            flex: 1;
+        }
+
+        #Basic03 .itm figure {
+            margin: 0 0 24px 0;
+        }
+
+        #basic03 .itm strong {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 16px 0;
+            display: block;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="Wrap">
+        <header id="Header">
+            <h1>Logo</h1>
+        </header>
+        <main id="Main">
+            <section id="Basic01">
+                <div class="Title">
+                    <h2>기본섹션</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, quis!</p>
+                </div>
+                <div class="Inner">
+                    <div class="itm">A</div>
+                    <div class="itm">B</div>
+                    <div class="itm">C</div>
+                </div>
+            </section>
+            <section id="Basic02">
+                <div class="Title">
+                    <h2>기본섹션</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, quis!</p>
+                </div>
+                <div class="Inner">
+                    <div class="itm">
+                        <img src="../images/mainvisual01.jpg" alt="">
+                    </div>
+                    <div class="itm">
+                        <img src="../images/mainvisual01.jpg" alt="">
+                    </div>
+                    <div class="itm">
+                        <img src="../images/grafflogo.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section id="Basic03">
+                <div class="Title">
+                    <h2>기본섹션</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, quis!</p>
+                </div>
+                <div class="Inner">
+                    <div class="itm">
+                        <figure>
+                            <img src="../images/mainvisual01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title</strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum?</p>
+                        </figcaption>
+                    </div>
+                    <div class="itm">
+                        <figure>
+                            <img src="../images/mainvisual01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title</strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum?</p>
+                        </figcaption>
+                    </div>
+                    <div class="itm">
+                        <figure>
+                            <img src="../images/mainvisual01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title</strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum?</p>
+                        </figcaption>
+                    </div>
+                    <div class="itm">
+                        <figure>
+                            <img src="../images/mainvisual01.jpg" alt="">
+                        </figure>
+                        <figcaption>
+                            <strong>small title</strong>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, rerum?</p>
+                        </figcaption>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="Footer">
+            &copy; KIM
+        </footer>
+    </div>
+</body>
+
+</html>

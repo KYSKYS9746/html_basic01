@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+
+        }
+
+        .main {
+            position: relative;
+            height: 600px;
+            background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+        }
+
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header {
+            position: relative;
+            z-index: 1;
+            background: #f9f9f9;
+            line-height: 100px;
+        }
+
+        header .inner {
+            display: flex;
+
+        }
+
+        .header .gnb {
+
+            margin: 0 0 0 auto;
+
+        }
+
+        .header .gnb>ul {
+            display: flex;
+            gap: 30px;
+
+        }
+
+        .header .gnb>ul>li {
+            position: relative;
+
+        }
+
+        .header .gnb>ul>li .sub {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            background: tomato;
+
+            display: none;
+
+            z-index: 1;
+            line-height: 40px;
+        }
+
+        /* :hover =마우스를 올렸을 때 효과 */
+        .header:hover .gnb>ul>li .sub {
+            display: block;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background: tomato;
+
+            display: none;
+        }
+
+        .header:hover::after {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="inner">
+                <h1>Logo</h1>
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="">Menu01</a>
+                            <ul class="sub">
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Menu01</a>
+                            <ul class="sub">
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Menu01</a>
+                            <ul class="sub">
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">Menu01</a>
+                            <ul class="sub">
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Menu01</a>
+                            <ul class="sub">
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Menu01</a>
+                            <ul class="sub">
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                                <li><a href="">semenu01</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main"></main>
+        <footer class="footer">
+            &copy; KIM.
+        </footer>
+    </div>
+
+</body>
+
+</html>

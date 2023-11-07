@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로배치flex</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        .Header {
+            margin: 0 0 100px 0;
+            background: #f9f9f9;
+            line-height: 100px;
+
+        }
+
+        .h01 {
+            /* 자식 박스들의 가로배치 */
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .h02 {
+            display: flex;
+            /* 가로배치된 박스의 위치를 가운데로 오게함 */
+            justify-content: center;
+        }
+
+        .h03 {
+            display: flex;
+            /* 가로배치된 박스의 위치를 오른쪽으로 */
+            justify-content: flex-end;
+        }
+
+        .h04 {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .h05 {
+            display: flex;
+        }
+
+        .h05 nav {
+            /* flex된 박스의 왼쪽 마진을 이빠이 줘서 오른쪽으로 밀어냄 */
+            margin: 0 0 0 auto;
+        }
+
+        .h06 {}
+
+        .h06 .inner {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .h06 .inner .left {
+            display: flex;
+        }
+
+        .h06 .inner .right {
+            display: flex;
+            margin: 0 0 0 auto;
+        }
+
+        .Tang {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 80px;
+        }
+
+        .Tang .Gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .Tang02 {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 80px;
+        }
+
+        .Tang02 .Gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .Tang02 h1 {
+            width: 190px;
+
+        }
+
+        .Tang02 .Util {
+            text-align: right;
+            width: 190px;
+        }
+
+        .Tang03 {
+            position: relative;
+            text-align: center;
+        }
+
+        .Tang03 h1 {
+            position: absolute;
+            left: 80px;
+            Top: 0;
+        }
+
+        .Tang03 .Gnb {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .Tang03 .Gnb>ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .Tang03 .Util {
+            position: absolute;
+            right: 80px;
+            top: 0;
+        }
+
+        .Tang04 {
+            display: flex;
+            padding: 0 80px;
+
+        }
+
+        .Tang04 .Gnb {
+            margin: 0 0 0 auto;
+        }
+
+        .Tang04 .Gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .Tang04 .Util {
+            margin: 0 0 0 200px;
+        }
+
+        .Tang05 {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 80px;
+        }
+
+        .Tang05 h1 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .Tang05 .Gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .Tang06 {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 80px;
+
+        }
+
+        .Tang06 .Gnb {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+
+        .Tang06 .Gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+    </style>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="Header h01">
+        <h1>LOGO</h1>
+        <nav>MENU</nav>
+    </header>
+    <hr />
+
+    <header class="Header h02">
+        <h1>LOGO</h1>
+        <nav>MENU</nav>
+    </header>
+    <hr />
+
+    <header class="Header h03">
+        <h1>LOGO</h1>
+        <nav>MENU</nav>
+    </header>
+    <hr />
+
+    <header class="Header h04">
+        <h1>LOGO</h1>
+        <nav>MENU</nav>
+        <div class="icon">icon</div>
+    </header>
+    <hr />
+
+    <header class="Header h05">
+        <h1>LOGO</h1>
+        <nav>MENU</nav>
+    </header>
+    <hr />
+
+    <header class="Header h06">
+        <div class="inner">
+            <div class="left">
+                <div>01</div>
+                <div>02</div>
+            </div>
+            <div class="right">
+                <div>03</div>
+                <div>04</div>
+            </div>
+        </div>
+    </header>
+
+    <hr />
+
+    <header class="Header Tang">
+        <h1>탕후루LOGO</h1>
+        <nav class="Gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
+                <li><a href="">menu04</a></li>
+            </ul>
+        </nav>
+        <div class="Util">
+            Icon
+        </div>
+    </header>
+    <hr />
+    <header class="Header Tang02">
+        <h1>탕후루LOGO</h1>
+        <nav class="Gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
+                <li><a href="">menu04</a></li>
+            </ul>
+        </nav>
+        <div class="Util">
+            Icon
+        </div>
+    </header>
+
+    <hr />
+    <header class="Header Tang03">
+        <h1>탕후루LOGO</h1>
+        <nav class="Gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
+                <li><a href="">menu04</a></li>
+            </ul>
+        </nav>
+        <div class="Util">
+            Icon
+        </div>
+    </header>
+
+    <hr />
+    <header class="Header Tang04">
+        <h1>탕후루LOGO</h1>
+        <nav class="Gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
+                <li><a href="">menu04</a></li>
+            </ul>
+        </nav>
+        <div class="Util">
+            Icon
+        </div>
+    </header>
+
+    <hr />
+    <header class="Header Tang05">
+        <h1>탕후루LOGO</h1>
+        <nav class="Gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
+                <li><a href="">menu04</a></li>
+            </ul>
+        </nav>
+        <div class="Util">
+            Icon
+        </div>
+    </header>
+
+    <hr />
+    <header class="Header Tang06">
+        <h1>탕후루LOGO</h1>
+        <nav class="Gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
+                <li><a href="">menu04</a></li>
+            </ul>
+        </nav>
+        <div class="Util">
+            Icon
+        </div>
+    </header>
+
+</body>
+
+</html>
